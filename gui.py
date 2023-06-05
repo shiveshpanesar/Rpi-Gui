@@ -1,4 +1,5 @@
 import tkinter as tk
+import random
 # import ultrasonic as us
 import colour as col
 from datetime import datetime
@@ -29,9 +30,10 @@ def bar(x1,x2,tankName,textX):
 
 	#val= map_value(us.u(TRIG=6,ECHO=5), 2, 20, 0, 800)
 	val=0
-	val= map_value(10, 2, 20, 0, 800)
+	for i in range(50):
+		val= map_value(random.randrange(2,20), 2, 20, 0, 700)
 	y1 = val 
-	y2 = height 
+	y2 = height
 	
 	per,color=getData(val)
 	print(per)
